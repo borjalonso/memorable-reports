@@ -1,0 +1,355 @@
+{
+  "database_dashboard" : {
+    "table" : [
+      {
+        "name" : "users",
+        "columns" : ["id", "created_at"],
+        "parse_dates": ["created_at"],
+        "master_table" : 1,
+        "inner_joins" : [
+          {
+            "on" : "id",
+            "join_with" : "profile",
+            "join_with_on" : "user_id"
+          },
+          {
+            "on" : "id",
+            "join_with" : "user_given_to",
+            "join_with_on" : "user_id"
+          },
+          {
+            "on" : "id",
+            "join_with" : "facebookuser",
+            "join_with_on" : "user_id"
+          },
+          {
+            "on" : "id",
+            "join_with" : "twitteruser",
+            "join_with_on" : "user_id"
+          }
+        ]
+      },
+      {
+        "name" : "profile",
+        "columns" : ["user_id",
+          "age",
+          "telephone",
+          "country_id",
+          "emailConfirmed",
+          "telephoneConfirmed",
+          "emailSubscribed",
+          "telephoneSubscribed",
+          "shareMyData",
+          "robinson",
+          "gender"],
+        "parse_dates": null,
+        "master_table" : 0,
+        "inner_joins" : [
+          {
+            "on" : "country_id",
+            "join_with" : "country",
+            "join_with_on" : "id"
+          }
+        ]
+      },
+      {
+        "name" : "user_given_to",
+        "columns" : ["user_id", "given_to", "given_at"],
+        "parse_dates": ["given_at"],
+        "master_table" : 0,
+        "inner_joins" : []
+      },
+      {
+        "name" : "facebookuser",
+        "columns" : ["user_id",
+          "facebook_id",
+          "birthday"],
+        "parse_dates": ["birthday"],
+        "master_table" : 0,
+        "inner_joins" : []
+      },
+      {
+        "name" : "twitteruser",
+        "columns" : ["user_id",
+          "twitter_id"],
+        "parse_dates": null,
+        "master_table" : 0,
+        "inner_joins" : []
+      },
+      {
+        "name" : "country",
+        "columns" : ["id",
+          "name"],
+        "parse_dates": null,
+        "master_table" : 0,
+        "inner_joins" : []
+      },
+      {
+        "name": "users",
+        "columns": [
+          "id"
+        ],
+        "parse_dates": null,
+        "master_table": 1,
+        "inner_joins": [
+          {
+            "on": "id",
+            "join_with": "user_privacy_policy",
+            "join_with_on": "user_id"
+          }
+        ]
+      },
+      {
+        "name" : "user_privacy_policy",
+        "columns" : ["id",
+          "user_id",
+          "privacy_policies_checkbox_id",
+          "checked"],
+        "parse_dates": null,
+        "master_table" : 0,
+        "inner_joins" : []
+      }
+    ]
+  },
+  "lead_report" : {
+    "table" : [
+      {
+        "name" : "users",
+        "columns" : ["id",
+          "first_name",
+          "last_name",
+          "email"],
+        "parse_dates": null,
+        "master_table" : 1,
+        "inner_joins" : [
+          {
+            "on" : "id",
+            "join_with" : "profile",
+            "join_with_on" : "user_id"
+          },
+          {
+            "on" : "id",
+            "join_with" : "facebookuser",
+            "join_with_on" : "user_id"
+          },
+          {
+            "on" : "id",
+            "join_with" : "twitteruser",
+            "join_with_on" : "user_id"
+          }
+        ]
+      },
+      {
+        "name" : "profile",
+        "columns" : ["user_id",
+          "gender",
+          "birthday",
+          "telephone",
+          "country_id",
+          "postal_code",
+          "emailConfirmed",
+          "telephoneConfirmed",
+          "emailSubscribed",
+          "telephoneSubscribed",
+          "shareMyData",
+          "cant_call",
+          "emailUnsubscribedDate",
+          "robinson",
+          "device"],
+        "parse_dates": ["birthday"],
+        "master_table" : 0,
+        "inner_joins" : [
+          {
+            "on" : "country_id",
+            "join_with" : "country",
+            "join_with_on" : "id"
+          },
+          {
+            "on" : "user_id",
+            "join_with" : "score",
+            "join_with_on" : "user_id"
+          }
+        ]
+      },
+      {
+        "name" : "facebookuser",
+        "columns" : ["user_id",
+          "facebook_id",
+          "birthday",
+          "first_name",
+          "last_name",
+          "location",
+          "email"],
+        "parse_dates": ["birthday"],
+        "master_table" : 0,
+        "inner_joins" : []
+      },
+      {
+        "name" : "twitteruser",
+        "columns" : ["user_id",
+          "twitter_id"],
+        "parse_dates": null,
+        "master_table" : 0,
+        "inner_joins" : []
+      },
+      {
+        "name" : "country",
+        "columns" : ["id",
+          "name"],
+        "parse_dates": null,
+        "master_table" : 0,
+        "inner_joins" : []
+      },
+      {
+        "name" : "score",
+        "columns" : ["user_id",
+          "score"],
+        "parse_dates": null,
+        "master_table" : 0,
+        "inner_joins" : []
+      },
+      {
+        "name" : "users",
+        "columns" : ["id"],
+        "parse_dates": null,
+        "master_table" : 1,
+        "inner_joins" : [
+          {
+            "on" : "id",
+            "join_with" : "user_given_to",
+            "join_with_on" : "user_id"
+          }
+        ]
+      },
+      {
+        "name" : "user_given_to",
+        "columns" : ["user_id", "given_to", "given_at"],
+        "parse_dates": ["given_at"],
+        "master_table" : 0,
+        "inner_joins" : []
+      },
+      {
+        "name" : "users",
+        "columns" : ["id",
+          "first_name",
+          "last_name"],
+        "parse_dates": null,
+        "master_table" : 1,
+        "inner_joins" : [
+          {
+            "on" : "id",
+            "join_with" : "push",
+            "join_with_on" : "user_id"
+          }
+        ]
+      },
+      {
+        "name" : "push",
+        "columns" : ["user_id",
+          "question_id",
+          "date",
+          "ip"],
+        "parse_dates": ["date"],
+        "master_table" : 0,
+        "inner_joins" : [
+          {
+            "on" : "question_id",
+            "join_with" : "question",
+            "join_with_on" : "id"
+          }
+        ]
+      },
+      {
+        "name" : "question",
+        "columns" : ["id",
+          "parent_id",
+          "user_id",
+          "privacy_policy_id",
+          "question",
+          "term_id"],
+        "parse_dates": null,
+        "master_table" : 0,
+        "inner_joins" : [
+          {
+            "on" : "term_id",
+            "join_with" : "terms",
+            "join_with_on" : "id"
+          },
+          {
+            "on" : "user_id",
+            "join_with" : "users",
+            "join_with_on" : "id"
+          }
+        ]
+      },
+      {
+        "name" : "terms",
+        "columns" : ["id",
+          "name_es"],
+        "parse_dates": null,
+        "master_table" : 0,
+        "inner_joins" : []
+      },
+      {
+        "name" : "users",
+        "columns" : ["id",
+          "first_name",
+          "last_name"],
+        "parse_dates": null,
+        "master_table" : 0,
+        "inner_joins" : []
+      },
+      {
+        "name" : "users",
+        "columns" : ["id"],
+        "parse_dates": null,
+        "master_table" : 1,
+        "inner_joins" : [
+          {
+            "on" : "id",
+            "join_with" : "user_privacy_policy",
+            "join_with_on" : "user_id"
+          }
+        ]
+      },
+      {
+        "name" : "user_privacy_policy",
+        "columns" : ["id",
+          "user_id",
+          "privacy_policies_checkbox_id",
+          "checked"],
+        "parse_dates": null,
+        "master_table" : 0,
+        "inner_joins" : [
+          {
+            "on" : "privacy_policies_checkbox_id",
+            "join_with" : "privacy_policy_checkbox",
+            "join_with_on" : "id"
+          }
+        ]
+      },
+      {
+        "name" : "privacy_policy_checkbox",
+        "columns" : ["id",
+          "privacy_policy_id"],
+        "parse_dates": null,
+        "master_table" : 0,
+        "inner_joins" : [
+          {
+            "on" : "privacy_policy_id",
+            "join_with" : "privacy_policy",
+            "join_with_on" : "id"
+          }
+        ]
+      },
+      {
+        "name" : "privacy_policy",
+        "columns" : ["id",
+          "name"],
+        "parse_dates": null,
+        "master_table" : 0,
+        "inner_joins" : []
+      }
+    ]
+  }
+}

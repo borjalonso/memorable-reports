@@ -1,0 +1,1128 @@
+{
+  "client": [
+    {
+      "name": "Cualquiera",
+      "alias": "any",
+      "acronym": "ANY",
+      "identifier": 0,
+      "entry_date": "2021-11-02 00:00:00",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega",
+          "delivery_type": "hot_list",
+          "frequency": "daily",
+          "delivery_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "09:00:00",
+          "columns": {
+              "first_name": "fName",
+              "last_name_full": "fSurname",
+              "email": "fEmail",
+              "gender": "fGender",
+              "telephone": "fPhone",
+              "birthday": "fBirthdate",
+              "ip": "fIp",
+              "id": "Id",
+              "signature_method": "fOptions",
+              "question": "fOptions2",
+              "date": "fDate"
+          },
+          "filters": {
+            "has_telephone": "(`telephone` == `telephone`)",
+          },
+          "date_columns": ["birthday", "date"],
+          "date_format": "%m-%d-%Y"
+        }
+      ]
+    },
+    {
+      "name": "Medicos Sin Fronteras",
+      "alias": "msf",
+      "acronym": "MSF",
+      "identifier": 2,
+      "entry_date": "2020-04-23 00:00:00",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 35 años",
+          "delivery_type": "hot_list",
+          "frequency": "daily",
+          "delivery_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "09:00:00",
+          "columns": {
+              "first_name": "fName",
+              "last_name_full": "fSurname",
+              "email": "fEmail",
+              "gender": "fGender",
+              "telephone": "fPhone",
+              "birthday": "fBirthdate",
+              "ip": "fIp",
+              "id": "Id",
+              "signature_method": "fOptions",
+              "question": "fOptions2",
+              "date": "fDate"
+          },
+          "filters": {
+            "more_than_35": "(`age` > 35)",
+            "from_spain": "(`name` == \"España\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["birthday", "date"],
+          "date_format": "%m-%d-%Y"
+        },
+        {
+          "campaign_name": "Entrega leads entre 30 y 35 años",
+          "delivery_type": "hot_list",
+          "frequency": "daily",
+          "delivery_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "09:00:00",
+          "columns": {
+            "first_name": "fName",
+            "last_name_full": "fSurname",
+            "email": "fEmail",
+            "gender": "fGender",
+            "telephone": "fPhone",
+            "birthday": "fBirthdate",
+            "ip": "fIp",
+            "id": "Id",
+            "signature_method": "fOptions",
+            "question": "fOptions2",
+            "date": "fDate"
+          },
+          "filters": {
+            "from_30_to_35": "(`age` >= 30 and `age` <= 35)",
+            "from_spain": "(`name` == \"España\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["birthday", "date"],
+          "date_format": "%m-%d-%Y"
+        }
+      ]
+    },
+    {
+      "name": "Cris Contra El Cancer",
+      "alias": "cris-contra-el-cancer",
+      "acronym": "CRIS",
+      "identifier": 4,
+      "entry_date": "2019-10-17 00:00:00",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 35 años",
+          "delivery_type": "hot_list",
+          "frequency": "daily",
+          "delivery_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "09:00:00",
+          "columns": {
+            "first_name": "fName",
+            "last_name_full": "fSurname",
+            "email": "fEmail",
+            "gender": "fGender",
+            "telephone": "fPhone",
+            "birthday": "fBirthdate",
+            "ip": "fIp",
+            "id": "Id",
+            "signature_method": "fOptions",
+            "question": "fOptions2",
+            "date": "fDate"
+          },
+          "filters": {
+            "more_than_35": "(`age` > 35)",
+            "from_spain": "(`name` == \"España\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["birthday", "date"],
+          "date_format": "%m-%d-%Y"
+        },
+        {
+          "campaign_name": "Entrega leads entre 30 y 35 años",
+          "delivery_type": "hot_list",
+          "frequency": "daily",
+          "delivery_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "09:00:00",
+          "columns": {
+            "first_name": "fName",
+            "last_name_full": "fSurname",
+            "email": "fEmail",
+            "gender": "fGender",
+            "telephone": "fPhone",
+            "birthday": "fBirthdate",
+            "ip": "fIp",
+            "id": "Id",
+            "signature_method": "fOptions",
+            "question": "fOptions2",
+            "date": "fDate"
+          },
+          "filters": {
+            "from_30_to_35": "(`age` >= 30 and `age` <=35)",
+            "from_spain": "(`name` == \"España\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["birthday", "date"],
+          "date_format": "%m-%d-%Y"
+        }
+      ]
+    },
+    {
+      "name": "Uno Entre Cien Mil",
+      "alias": "unoentrecienmil",
+      "acronym": "UECM",
+      "identifier": 16,
+      "entry_date": "2020-09-02 00:00:00",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 30 años",
+          "delivery_type": "hot_list",
+          "frequency": "daily",
+          "delivery_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "09:00:00",
+          "columns": {
+            "date": "Fecha",
+            "first_name": "Nombre",
+            "last_name_full": "Apellidos",
+            "email": "Email",
+            "telephone": "Teléfono",
+            "question": "Causa",
+            "source": "Origen",
+            "key8": "Tipología de lead",
+            "key9": "Mensaje"
+          },
+          "filters": {
+            "more_than_30": "(`age` > 30)",
+            "from_spain": "(`name` == \"España\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)",
+            "cant_email": "(`emailUnsubscribedDate`.isnull())"
+          },
+          "date_columns": ["date"],
+          "date_format": "%m-%d-%Y"
+        },
+        {
+          "campaign_name": "Entrega leads campañas patrocinadas",
+          "delivery_type": "hot_list",
+          "frequency": "daily",
+          "delivery_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "09:00:00",
+          "columns": {
+            "date": "Fecha",
+            "first_name": "Nombre",
+            "last_name_full": "Apellidos",
+            "email": "Email",
+            "telephone": "Teléfono",
+            "question": "Causa",
+            "source": "Origen",
+            "key9": "Mensaje"
+          },
+          "filters": {
+            "more_than_30": "(`age` > 30)",
+            "from_spain": "(`name` == \"España\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["date"],
+          "date_format": "%m-%d-%Y"
+        }
+      ]
+    },
+    {
+      "name": "Acnur",
+      "alias": "acnur",
+      "acronym": "ACNUR",
+      "identifier": 3,
+      "entry_date": "2018-07-10 00:00:00",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 29 años",
+          "delivery_type": "hot_list",
+          "frequency": "every_two_days",
+          "delivery_days": [
+            "Monday",
+            "Wednesday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "09:00:00",
+          "columns": {
+            "id": "ID",
+            "first_name": "Nombre",
+            "middle_name": "Apellido 1",
+            "last_name": "Apellido 2",
+            "email": "Email",
+            "telephone": "Teléfono",
+            "signature_method": "Método firma",
+            "birthday": "Fecha de nacimiento",
+            "gender": "Género",
+            "question": "Pregunta apoyada"
+          },
+          "filters": {
+            "more_than_29": "(`age` > 29)",
+            "from_spain": "(`name` == \"España\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["birthday"],
+          "date_format": "%Y-%m-%d"
+        }
+      ]
+    },
+    {
+      "name": "Acción Contra el Hambre",
+      "alias": "ach",
+      "acronym": "ACH",
+      "identifier": 10,
+      "entry_date": "2020-04-22 00:00:00",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 30 años",
+          "delivery_type": "hot_list",
+          "frequency": "every_two_days",
+          "delivery_days": [
+            "Monday",
+            "Wednesday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "09:00:00",
+          "columns": {
+            "id": "ID",
+            "first_name": "Nombre",
+            "middle_name": "Apellido",
+            "email": "Email",
+            "telephone": "Teléfono",
+            "signature_method": "Método firma",
+            "birthday": "Fecha de nacimiento",
+            "gender": "Género",
+            "question": "Pregunta apoyada",
+            "creator": "Creador",
+            "key11": "Temática",
+            "ip": "IP"
+          },
+          "filters": {
+            "more_than_30": "(`age` > 30)",
+            "from_spain": "(`name` == \"España\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["birthday"],
+          "date_format": "%Y-%m-%d"
+        }
+      ]
+    },
+    {
+      "name": "Plan Internacional",
+      "alias": "plan-internacional",
+      "acronym": "PLAN",
+      "identifier": 19,
+      "entry_date": "2021-03-30 00:00:00",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 30 años",
+          "delivery_type": "hot_list",
+          "frequency": "every_two_days",
+          "delivery_days": [
+            "Monday",
+            "Wednesday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "09:00:00",
+          "columns": {
+            "id": "ID",
+            "first_name": "Nombre",
+            "middle_name": "Apellido",
+            "email": "Email",
+            "telephone": "Teléfono",
+            "signature_method": "Método firma",
+            "birthday": "Fecha de nacimiento",
+            "gender": "Género",
+            "question": "Pregunta apoyada",
+            "creator": "Creador",
+            "key11": "Temática",
+            "ip": "IP"
+          },
+          "filters": {
+            "more_than_30": "(`age` > 30)",
+            "from_spain": "(`name` == \"España\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["birthday"],
+          "date_format": "%Y-%m-%d"
+        }
+      ]
+    },
+    {
+      "name": "Aldeas Infantiles SOS",
+      "alias": "aldeas-infantiles",
+      "acronym": "AISOS",
+      "identifier": 12,
+      "entry_date": "2018-08-31 00:00:00",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 35 años",
+          "delivery_type": "hot_list",
+          "frequency": "daily",
+          "delivery_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "09:00:00",
+          "columns": {
+            "date": "Fecha",
+            "id": "ID",
+            "first_name": "Nombre",
+            "middle_name": "Apellido1",
+            "last_name": "Apellido2",
+            "telephone": "Teléfono",
+            "postal_code": "Código postal",
+            "key7": "Población",
+            "signature_method": "Método firma",
+            "birthday": "Fecha nacimiento",
+            "gender": "Género",
+            "email": "Email",
+            "question": "Pregunta apoyada",
+            "key13": "Provincia",
+            "key14": "Comunidad"
+          },
+          "filters": {
+            "more_than_35": "(`age` > 35)",
+            "from_spain": "(`name` == \"España\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["date", "birthday"],
+          "date_format": "%Y-%m-%d"
+        }
+      ]
+    },
+    {
+      "name": "Fundación Anar",
+      "alias": "anar",
+      "acronym": "ANAR",
+      "identifier": 18,
+      "entry_date": "2018-08-31 00:00:00",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 27 años",
+          "delivery_type": "hot_list",
+          "frequency": "daily",
+          "delivery_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "09:00:00",
+          "columns": {
+            "id": "ID",
+            "first_name": "Nombre",
+            "last_name_full": "Apellidos",
+            "email": "Email",
+            "telephone": "Telefono",
+            "signature_method": "Método firma",
+            "birthday": "Fecha nacimiento",
+            "age": "Edad",
+            "gender": "Género",
+            "question": "Última pregunta apoyada",
+            "creator": "Creador",
+            "key11": "Temática"
+          },
+          "filters": {
+            "more_than_27": "(`age` > 27)",
+            "from_spain": "(`name` == \"España\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["birthday"],
+          "date_format": "%Y-%m-%d"
+        }
+      ]
+    },
+    {
+      "name": "Alboan",
+      "alias": "alboan",
+      "acronym": "ALBOAN",
+      "identifier": null,
+      "entry_date": "2021-10-13 00:00:00",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 30 años de Navarra y País Vasco",
+          "delivery_type": "hot_list",
+          "frequency": "daily",
+          "delivery_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "09:00:00",
+          "columns": {
+            "id": "ID",
+            "first_name": "First name",
+            "last_name_full": "Last name",
+            "creator": "Creador",
+            "key5": "Temática",
+            "question": "Campaña firmada",
+            "key7": "Enlace a la campaña",
+            "key8": "Código postal",
+            "key9": "Provincia",
+            "telephone": "Phone number",
+            "email": "Email",
+            "date": "Fecha firma",
+            "age": "Edad",
+            "device": "Modelo movil"
+          },
+          "filters": {
+            "more_than_39": "(`age` > 30)",
+            "from_spain": "(`name` == \"España\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)",
+            "from_vasco_navarra": "(postal_code.str.startswith(tuple([\"01\", \"20\", \"48\", \"31\"])))"
+          },
+          "date_columns": ["date"],
+          "date_format": "%d/%m/%y"
+        }
+      ]
+    },
+    {
+      "name": "Ayuda En Acción Perú",
+      "alias": "peru-ayuda-en-accion",
+      "acronym": "AYUDA",
+      "identifier": null,
+      "entry_date": "",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 40 años campañas patrocinadas",
+          "delivery_type": "",
+          "frequency": "",
+          "delivery_days": [],
+          "maximum_delivery_time": "",
+          "columns": {
+
+          },
+          "filters": {
+            "more_than_40": "(`age` > 40)",
+            "from_spain": "(`name` == \"Perú\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": [],
+          "date_format": ""
+        }
+      ]
+    },
+    {
+      "name": "Childfund México",
+      "alias": "",
+      "acronym": "CHILDFUND",
+      "identifier": 20,
+      "entry_date": "",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 35 años",
+          "delivery_type": "",
+          "frequency": "",
+          "delivery_days": [],
+          "maximum_delivery_time": "",
+          "columns": {
+
+          },
+          "filters": {
+            "more_than_35": "(`age` > 35)",
+            "from_spain": "(`name` == \"México\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": [],
+          "date_format": ""
+        }
+      ]
+    },
+    {
+      "name": "Unicef",
+      "alias": "mx-unicef-mx",
+      "acronym": "UNICEF MX",
+      "identifier": 24,
+      "entry_date": "",
+      "exclude_from_delivery": ["mx-unicef-mx-2"],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 35 años",
+          "delivery_type": "hot_list",
+          "frequency": "daily",
+          "delivery_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "09:00:00",
+          "columns": {
+            "id": "ID",
+            "first_name": "First name",
+            "middle_name": "Last name",
+            "name_es": "Campaña",
+            "key4": "Agencia Leads",
+            "creator": "Creador",
+            "key6": "Temática",
+            "question": "Término",
+            "telephone": "Phone number",
+            "email": "Email",
+            "date": "Fecha creación",
+            "age": "Edad"
+          },
+          "filters": {
+            "more_than_35": "(`age` >= 35)",
+            "from_spain": "(`name` == \"México\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["date"],
+          "date_format": "%d/%m/%y"
+        }
+      ]
+    },
+    {
+      "name": "Fundación Cardioinfantil Colombia",
+      "alias": "colombia-fundacion-cardioinfantil",
+      "acronym": "CARDIOINFANTIL",
+      "identifier": 25,
+      "entry_date": "",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 35 años",
+          "delivery_type": "",
+          "frequency": "",
+          "delivery_days": [],
+          "maximum_delivery_time": "",
+          "columns": {
+            "id": "ID",
+            "first_name": "Nombre",
+            "middle_name": "Apellido",
+            "email": "Email",
+            "telephone": "Teléfono",
+            "source": "Método firma",
+            "birthday": "Fecha nacimiento",
+            "gender": "Género",
+            "creator": "Creador",
+            "key10": "Temática",
+            "question": "Pregunta apoyada",
+            "ip": "IP",
+            "key13": "Departamento",
+            "key14": "Ciudad",
+            "postal_code": "Código postal"
+          },
+          "filters": {
+            "more_than_35": "(`age` > 35)",
+            "from_spain": "(`name` == \"Colombia\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["birthday"],
+          "date_format": "%Y-%m-%d"
+        }
+      ]
+    },
+    {
+      "name": "Aldeas Infantiles SOS Colombia",
+      "alias": "colombia-aldeas-infantiles",
+      "acronym": "ALDEAS",
+      "identifier": 30,
+      "entry_date": "",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "",
+          "delivery_type": "",
+          "frequency": "daily",
+          "delivery_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "",
+          "columns": {
+
+          },
+          "filters": {
+            "more_than_": "(`age` > 35)",
+            "from_spain": "(`name` == \"Colombia\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": [],
+          "date_format": ""
+        }
+      ]
+    },
+    {
+      "name": "Ayuda en Acción Colombia",
+      "alias": "colombia-ayuda-en-accion",
+      "acronym": "AYUDA",
+      "identifier": 29,
+      "entry_date": "",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "",
+          "delivery_type": "",
+          "frequency": "",
+          "delivery_days": [],
+          "maximum_delivery_time": "",
+          "columns": {
+            "id": "ID",
+            "first_name": "Nombre",
+            "middle_name": "Apellido",
+            "email": "Email",
+            "telephone": "Teléfono",
+            "signature_method": "Método firma",
+            "birthday": "Fecha nacimiento",
+            "date": "Fecha firma",
+            "gender": "Género",
+            "creator": "Creador",
+            "key11": "Temática",
+            "question": "Pregunta apoyada",
+            "ip": "IP",
+            "key14": "Región",
+            "key15": "Municipio",
+            "postal_code": "Código postal"
+          },
+          "filters": {
+            "more_than_": "(`age` > 39)",
+            "from_spain": "(`name` == \"Colombia\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["birthday", "date"],
+          "date_format": "%Y-%m-%d"
+        }
+      ]
+    },
+    {
+      "name": "World Vision Chile",
+      "alias": "chile-world-vision",
+      "acronym": "WV",
+      "identifier": 26,
+      "entry_date": "",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 25 años",
+          "delivery_type": "",
+          "frequency": "weekly",
+          "delivery_days": [
+            "Monday"
+          ],
+          "maximum_delivery_time": "",
+          "columns": {
+            "id": "ID",
+            "first_name": "Nombre",
+            "middle_name": "Apellido",
+            "email": "Email",
+            "telephone": "Teléfono",
+            "signature_method": "Método firma",
+            "date": "Fecha firma",
+            "gender": "Género",
+            "creator": "Creador",
+            "key10": "Temática",
+            "question": "Pregunta apoyada",
+            "ip": "IP",
+            "key13": "Región",
+            "key14": "Comuna",
+            "postal_code": "Código postal",
+            "key16": "Link"
+          },
+          "filters": {
+            "more_than_25": "(`age` > 25)",
+            "from_chile": "(`name` == \"Chile\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["date"],
+          "date_format": "%Y-%m-%d"
+        }
+      ]
+    },
+    {
+      "name": "Amnistía Internacional Chile",
+      "alias": "chile-amnistia-internacional",
+      "acronym": "AMNISTÍA",
+      "identifier": 22,
+      "entry_date": "",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 23 años",
+          "delivery_type": "hot_list",
+          "frequency": "every_two_days",
+          "delivery_days": [
+            "Tuesday",
+            "Thursday"
+          ],
+          "maximum_delivery_time": "",
+          "columns": {
+            "date": "Fecha",
+            "id": "ID",
+            "first_name": "Nombre",
+            "middle_name": "Apellido",
+            "email": "Email",
+            "telephone": "Teléfono",
+            "signature_method": "Método firma",
+            "birthday": "Fecha nacimiento",
+            "gender": "Género",
+            "creator": "Creador",
+            "key10": "Temática",
+            "question": "Pregunta apoyada",
+            "ip": "IP",
+            "key13": "Región",
+            "key14": "Comuna"
+          },
+          "filters": {
+            "more_than_23": "(`age` > 23)",
+            "from_chile": "(`name` == \"Chile\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["date", "birthday"],
+          "date_format": "%Y-%m-%d"
+        }
+      ]
+    },
+    {
+      "name": "Greenpeace Chile",
+      "alias": "chile-greenpeace",
+      "acronym": "GREENPEACE",
+      "identifier": 28,
+      "entry_date": "",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 20 años",
+          "delivery_type": "hot_list",
+          "frequency": "every_two_days",
+          "delivery_days": [
+            "Monday",
+            "Wednesday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "",
+          "columns": {
+            "id": "ID",
+            "first_name": "Nombre",
+            "middle_name": "Apellido",
+            "email": "Email",
+            "telephone": "Teléfono",
+            "signature_method": "Método firma",
+            "date": "Fecha del apoyo",
+            "gender": "Género",
+            "creator": "Creador",
+            "key10": "Temática",
+            "question": "Pregunta apoyada",
+            "ip": "IP",
+            "key13": "Región",
+            "key14": "Comuna",
+            "key15": "Link"
+          },
+          "filters": {
+            "more_than_20": "(`age` > 20)",
+            "from_chile": "(`name` == \"Chile\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["date"],
+          "date_format": "%Y-%m-%d"
+        }
+      ]
+    },
+    {
+      "name": "Fundación Las Rosas Chile",
+      "alias": "chile-fundacion-las-rosas",
+      "acronym": "LASROSAS",
+      "identifier": 31,
+      "entry_date": "",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 25 años",
+          "delivery_type": "hot_list",
+          "frequency": "daily",
+          "delivery_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "",
+          "columns": {
+            "first_name": "Nombre",
+            "middle_name": "Apellido",
+            "email": "Email",
+            "telephone": "Teléfono",
+            "signature_method": "Método firma",
+            "birthday": "Fecha nacimiento",
+            "date": "Fecha firma",
+            "gender": "Género",
+            "creator": "Creador",
+            "key10": "Temática",
+            "key11": "Resumen campaña",
+            "question": "Pregunta",
+            "key13": "Región",
+            "key14": "Comuna"
+          },
+          "filters": {
+            "more_than_25": "(`age` > 25)",
+            "from_chile": "(`name` == \"Chile\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["date", "birthday"],
+          "date_format": "%Y-%m-%d"
+        }
+      ]
+    },
+    {
+      "name": "Unicef Chile",
+      "alias": "",
+      "acronym": "UNICEF",
+      "identifier": null,
+      "entry_date": "",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads entre 25 y 60 años",
+          "delivery_type": "hot_list",
+          "frequency": "every_two_days",
+          "delivery_days": [
+            "Monday",
+            "Wednesday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "",
+          "columns": {
+            "first_name": "Nombre",
+            "middle_name": "Apellido",
+            "email": "Email",
+            "telephone": "Teléfono",
+            "signature_method": "Método firma",
+            "birthday": "Fecha nacimiento",
+            "date": "Fecha firma",
+            "gender": "Género",
+            "creator": "Creador",
+            "key10": "Temática",
+            "question": "Pregunta",
+            "key13": "Región",
+            "key14": "Comuna"
+          },
+          "filters": {
+            "from_25_to_60": "(`age` >= 25 and `age` <= 60)",
+            "from_chile": "(`name` == \"Chile\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["date", "birthday"],
+          "date_format": "%Y-%m-%d"
+        }
+      ]
+    },
+    {
+      "name": "Techo Argentina",
+      "alias": "argentina-techo",
+      "acronym": "TECHO",
+      "identifier": 23,
+      "entry_date": "",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 35 años",
+          "delivery_type": "hot_list",
+          "frequency": "daily",
+          "delivery_days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "maximum_delivery_time": "",
+          "columns": {
+            "id": "ID",
+            "first_name": "Nombre",
+            "middle_name": "Apellido",
+            "email": "Email",
+            "telephone": "Teléfono",
+            "signature_method": "Método firma",
+            "birthday": "Fecha nacimiento",
+            "gender": "Género",
+            "creator": "Creador",
+            "key10": "Temática",
+            "question": "Pregunta apoyada",
+            "ip": "IP",
+            "key13": "Región",
+            "key14": "Municipio",
+            "postal_code": "Código postal"
+          },
+          "filters": {
+            "more_than_35": "(`age` > 35)",
+            "from_argentina": "(`name` == \"Argentina\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["birthday"],
+          "date_format": "%Y-%m-%d"
+        }
+      ]
+    },
+    {
+      "name": "Madre Tierra Argentina",
+      "alias": "argentina-madre-tierra",
+      "acronym": "MADRETIERRA",
+      "identifier": 27,
+      "entry_date": "",
+      "exclude_from_delivery": [],
+      "months": [1, 3, 6],
+      "deliveries": [
+        {
+          "campaign_name": "Entrega leads mayores de 26 años",
+          "delivery_type": "",
+          "frequency": "",
+          "delivery_days": [],
+          "maximum_delivery_time": "",
+          "columns": {
+            "id": "ID",
+            "first_name": "Nombre",
+            "middle_name": "Apellido",
+            "email": "Email",
+            "telephone": "Teléfono",
+            "signature_method": "Método firma",
+            "birthday": "Fecha nacimiento",
+            "gender": "Género",
+            "creator": "Creador",
+            "key10": "Temática",
+            "question": "Pregunta apoyada",
+            "ip": "IP",
+            "key13": "Municipio",
+            "key14": "Ciudad",
+            "postal_code": "Código postal"
+          },
+          "filters": {
+            "more_than_26": "(`age` > 26)",
+            "from_argentina": "(`name` == \"Argentina\")",
+            "has_telephone": "(`telephone` == `telephone`)",
+            "share_data": "(`shareMyData` == 1)",
+            "cant_call": "(`cant_call` != 1)"
+          },
+          "date_columns": ["birthday"],
+          "date_format": "%Y-%m-%d"
+        }
+      ]
+    }
+  ]
+}
